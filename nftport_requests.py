@@ -1,9 +1,10 @@
 ''' This is the entry from download of contracts and associated NFTS from the collections.json file'''
 import json
-import assetdownload
+import pytest
+import utils.assetdownload
 from math import fabs
 import requests
-import config as cfg
+import config.config as cfg
 import dbaccess.crud as crud
 from datamodels.models import Contract
 from ratelimiter import RateLimiter

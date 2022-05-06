@@ -1,9 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\LocalSettings",
-    "\\tests",
-    "\\tests\\unit"
+    "\\tests\\unit",
+    "\\__pycache__"
   ],
+  "SelectedNode": "\\api",
   "PreviewInSolutionExplorer": false
 }
