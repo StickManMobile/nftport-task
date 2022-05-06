@@ -1,10 +1,10 @@
-
+import pytest
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy.dialects.postgresql import insert
 from sqlalchemy.dialects import postgresql
 from datamodels.models import Base, Contract, NFT
-import config as cfg
+from config import config as cfg
 
 engine = create_engine(cfg.DATABASE_URI)
 

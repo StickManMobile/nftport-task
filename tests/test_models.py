@@ -1,4 +1,4 @@
-from ...datamodels.models import Contract, NFT
+from datamodels.models import Contract, NFT
 
 def test_contract():
     '''

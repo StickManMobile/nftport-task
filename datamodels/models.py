@@ -1,5 +1,6 @@
 from importlib.metadata import metadata
 import json
+import pytest
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import Column, Integer, String, Date, JSON
 from sqlalchemy.dialects.postgresql import JSONB
