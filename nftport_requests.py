@@ -1,4 +1,4 @@
-''' This is a test module for Tom to test some code'''
+''' This is the entry from download of contracts and associated NFTS from the collections.json file'''
 import json
 import assetdownload
 from math import fabs
@@ -55,25 +55,23 @@ def get_contract_nfts_and_ins(contract_address: str):
             print(f"Unexpected {err=}, {type(err)=}")
     return nfts
 
-f = open("collections.json")
-data = json.load(f)
-threads= []
+def main():
+    f = open("collections.json")
+    data = json.load(f)
 
-session = crud.start_session()
-nfts = crud.query_nft_by_name("APE", session)
+    for contract_id in data:
+        results = get_contract_nfts_and_ins(contract_id)
 
-
-
-for contract_id in data:
-    results = get_contract_nfts_and_ins(contract_id)
-
-    for task in results:
+    
         rows = [];
         for nft in results: 
             rows.insert(0,[nft['token_id'],nft['contract_address'],nft['chain'],nft['metadata'],nft['metadata_url'],nft['file_url'],nft['cached_file_url'],nft['mint_date'],nft['file_information'],nft['updated_date']])
             assetdownload.add_url(nft['cached_file_url'])
+    
         assetdownload.runner()
         session = crud.start_session()
         crud.insert_nft(session,rows)
-    
-input('Awaiting completion...')
+    print("Import complete")
+
+if __name__ == "__main__":
+    main()

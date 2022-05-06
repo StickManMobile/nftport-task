@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\LocalSettings",
+    "\\tests",
+    "\\tests\\unit"
   ],
-  "SelectedNode": "\\api",
   "PreviewInSolutionExplorer": false
 }
