@@ -7,7 +7,9 @@ NFT_PORT_API_URL = 'https://api.nftport.xyz/v0/nfts/{contract_address}?chain=eth
 AUTH_HEADER = {"Authorization": API_KEY}
 
 
-def get_contract_nft_by_page(contract_address: str, page_number: int = 1) -> dict:
+def get_contract_nft_by_page(
+        contract_address: str,
+        page_number: int = 1) -> dict:
     url = NFT_PORT_API_URL.format(
         contract_address=contract_address, page_number=page_number)
     response = requests.get(url, headers=AUTH_HEADER)

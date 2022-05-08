@@ -1,5 +1,6 @@
 from datamodels.models import Contract, NFT
 
+
 def test_contract():
     '''
     Given the creation of a contract model
@@ -16,6 +17,7 @@ def test_contract():
     assert cont.contract_name == 'test2'
     assert cont.contract_symb == 'test3'
     assert cont.contract_type == 'test4'
+
 
 def test_nft():
     '''

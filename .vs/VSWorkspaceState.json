@@ -1,9 +1,11 @@
 {
   "ExpandedNodes": [
     "",
-    "\\tests\\unit",
-    "\\__pycache__"
+    "\\datamodels",
+    "\\dbaccess",
+    "\\nftpuller",
+    "\\tests",
+    "\\tests\\unit"
   ],
-  "SelectedNode": "\\api",
   "PreviewInSolutionExplorer": false
 }
