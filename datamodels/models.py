@@ -8,6 +8,7 @@ from sqlalchemy_json import mutable_json_type
 
 Base = declarative_base()
 
+
 class Contract(Base):
     __tablename__ = 'contract'
     contract_id = Column(String, primary_key=True)
@@ -17,7 +18,7 @@ class Contract(Base):
 
     def __repr__(self):
         return "<Contract(Name='{}', Symbol'{}', Type={})>"\
-                .format(self.contract_name, self.contract_symb, self.contract_type)
+            .format(self.contract_name, self.contract_symb, self.contract_type)
 
 
 class NFT(Base):
